@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./worker": {
+      "import" :"./dist/WebWorker/WebWorker.worker.js"
+    }
+  },
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {

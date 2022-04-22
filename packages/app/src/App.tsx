@@ -1,14 +1,14 @@
-import { useState } from "react";
-import logo from "./logo.svg";
+import * as React from "react";
 import "./App.css";
 import { WebWorker } from "components";
+import Worker from "components/src/WebWorker/WebWorker.worker?worker";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const workerRef = new Worker();
 
   return (
     <div className="App">
-      <WebWorker />
+      <WebWorker worker={workerRef} />
     </div>
   );
 }

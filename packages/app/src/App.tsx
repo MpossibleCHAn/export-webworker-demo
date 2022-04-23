@@ -4,10 +4,10 @@ import { WebWorker } from "components";
 import MyWorker from "components/worker?worker";
 
 function App() {
-  const worker = React.useMemo(() => new MyWorker(), [MyWorker]);
+  // const worker = React.useMemo(() => new MyWorker(), [MyWorker]);
   return (
     <div className="App">
-      <WebWorker worker={worker} />
+      <WebWorker AppWorker={MyWorker} />
     </div>
   );
 }
